@@ -1,7 +1,8 @@
 # pl2526
 Projeto PL
 
-A104168 - Jorge Rafael Machado Fernandes 
-A104260 - Diogo Teixeira Fernandes
-A104436 - André Filipe Pereira Ribeiro
+- [Jorge Rafael Machado Fernandes](https://github.com/rafafernandes888)
 
+- [Diogo Teixeira Fernandes](https://github.com/diogo7fernandes)
+
+- [André Filipe Pereira Ribeiro](https://github.com/andreribeiro5)

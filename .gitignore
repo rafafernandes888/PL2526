@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ficheiros gerados pelo PLY
+parsetab.py
+parser.out
+
+
+# Ambientes virtuais
+venv/
+env/
+.env
+
+# Windows/Mac
+.DS_Store
+Thumbs.db

@@ -1,31 +1,31 @@
 # Compilador Fortran 77 -> EWVM
 
-Este repositorio contem o projeto da Unidade Curricular de **Processamento de Linguagens** (PL) no ano letivo 2025/2026. O objetivo deste projeto e desenvolver um **Compilador** completo capaz de traduzir codigo escrito na linguagem *Fortran 77* para codigo maquina executavel na *EWVM* (EPL Web Virtual Machine).
+Este repositório contém o projeto da Unidade Curricular de **Processamento de Linguagens** (PL) no ano letivo 2025/2026. O objetivo deste projeto é desenvolver um **Compilador** completo capaz de traduzir código escrito na linguagem *Fortran 77* para código máquina executável na *EWVM* (EPL Web Virtual Machine).
 
-O projeto foi desenvolvido em **Python** e implementa um motor de compilacao modular composto por analise lexica, sintatica, semantica, otimizacao e geracao de codigo.
+O projeto foi desenvolvido em **Python** e implementa um motor de compilação modular composto por análise léxica, sintática, semântica, otimização e geração de código.
 
 ## Estrutura do Projeto
 ```text
 pl2526/
 ├── src/
 │   ├── main.py            # Ponto de entrada do compilador (pipeline completa)
-│   ├── lexer.py           # Analisador Lexico (tokenizacao e remocao de comentarios)
-│   ├── parser.py          # Analisador Sintatico (construcao da AST)
-│   ├── symbol_table.py    # Tabela de Simbolos (gestao de variaveis, arrays e funcoes)
-│   ├── semantic.py        # Analisador Semantico (verificacao de tipos e declaracoes)
+│   ├── lexer.py           # Analisador Léxico (tokenização e remoção de comentários)
+│   ├── parser.py          # Analisador Sintático (construção da AST)
+│   ├── symbol_table.py    # Tabela de Símbolos (gestão de variáveis, arrays e funções)
+│   ├── semantic.py        # Analisador Semântico (verificação de tipos e declarações)
 │   ├── optimizer.py       # Otimizador (Constant Folding)
-│   └── codegen.py         # Gerador de Codigo EWVM
+│   └── codegen.py         # Gerador de Código EWVM
 ├── tests/
 │   ├── fortran/           # Programas Fortran 77 de exemplo (.f)
-│   ├── vm/                # Codigo EWVM gerado para cada exemplo (.vm)
+│   ├── vm/                # Código EWVM gerado para cada exemplo (.vm)
 │   └── run_tests.py       # Script de testes automatizados (17 testes)
-├── docs/                  # Relatorio tecnico
+├── docs/                  # Relatório
 ├── .gitignore
-├── requirements.txt       # Dependencias Python (PLY)
+├── requirements.txt       # Dependências Python (PLY)
 └── README.md
 ```
 
-## Instalacao e Configuracao
+## Instalação e Configuração
 
 O compilador requer **Python 3.8+** e depende apenas da biblioteca PLY (Python Lex-Yacc).
 
@@ -39,14 +39,14 @@ pip install -r requirements.txt
 ```sh
 python src/main.py tests/fortran/conversor.f
 ```
-As instrucoes EWVM geradas sao impressas no terminal. Copie-as e execute-as no simulador [EWVM Online](https://ewvm.epl.di.uminho.pt/).
+As instruções EWVM geradas são impressas no terminal. Copie-as e execute-as no simulador [EWVM Online](https://ewvm.epl.di.uminho.pt/).
 
-### Apenas analise semantica (sem gerar codigo)
+### Apenas análise semântica (sem gerar código)
 ```sh
 python src/main.py tests/fortran/test_type_bad.f --semantic
 ```
 
-### Mostrar a AST (arvore sintatica)
+### Mostrar a AST (árvore sintática)
 ```sh
 python src/main.py tests/fortran/hello.f --ast
 ```
@@ -56,13 +56,13 @@ python src/main.py tests/fortran/hello.f --ast
 python tests/run_tests.py
 ```
 
-## Funcionalidades Extra (Valorizacoes)
+## Funcionalidades Extra (Valorizações)
 
-1. **Subprogramas (FUNCTION):** Suporte a funcoes com passagem de argumentos via variaveis globais, incluindo CALL e RETURN.
-2. **Otimizacao (Constant Folding):** Expressoes constantes sao avaliadas em tempo de compilacao (ex: `2 + 3 * 4` gera apenas `PUSHI 14`).
+1. **Subprogramas (FUNCTION):** Suporte a funções com passagem de argumentos via variáveis globais, incluindo CALL e RETURN.
+2. **Otimização (Constant Folding):** Expressões constantes são avaliadas em tempo de compilação (ex: `2 + 3 * 4` gera apenas `PUSHI 14`).
 
 ## Desenvolvido por
 
 - [Jorge Rafael Machado Fernandes](https://github.com/rafafernandes888)
 - [Diogo Teixeira Fernandes](https://github.com/diogo7fernandes)
-- [Andre Filipe Pereira Ribeiro](https://github.com/andreribeiro5)
+- [André Filipe Pereira Ribeiro](https://github.com/andreribeiro5)

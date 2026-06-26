@@ -72,3 +72,7 @@ python tests/run_tests.py
 * [Jorge Rafael Machado Fernandes](https://github.com/rafafernandes888)
 * [Diogo Teixeira Fernandes](https://github.com/diogo7fernandes)
 * [André Filipe Pereira Ribeiro](https://github.com/andreribeiro5)
+
+* Note
+
+This is an academic project developed at the University of Minho.
